@@ -1,0 +1,30 @@
+/*===============  Clearfix  ===================*/
+.clearfix:after{visibility:hidden;display:block;font-size:0;content:" ";clear:both;height:0}* html .clearfix{height:1%}.clearfix{display:block}
+
+body{
+    font-size: 16px;
+    font-family: sans-serif;
+}
+
+.vr-container {
+    position: fixed;
+}
+
+.sidebar {
+    width: $sidebar-width;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: $dark-0;
+    z-index: 1;
+}
+
+.main-container {
+    width: 100%;
+    height: 100%;
+    padding-left: $sidebar-width;
+    background-color: $dark-1;
+    left: 0;
+    top: 0; 
+    z-index: 0;
+}
