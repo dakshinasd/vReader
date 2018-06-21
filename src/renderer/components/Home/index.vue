@@ -1,21 +1,27 @@
 <template>
     <div class="home">
         <div class="sidebar vr-container">
-          <button class="vr-btn normal">Hello</button>
+          <AddFeedForm />
         </div>
         <div class="main-container vr-container">
-
+          <Feed />
         </div>
     </div>
 </template>
 
 <script>
+  import AddFeedForm from "../AddFeed";
+  import Feed from "../Feed";
+ 
 
   export default {
     name: 'home',
-    components: {  },
+    components: { AddFeedForm, Feed },
     methods: {
       
+    },
+    mounted() {
+
     }
   }
 </script>
