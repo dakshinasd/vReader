@@ -3,7 +3,7 @@
         <div class="sidebar vr-container">
           <AddFeedForm />
         </div>
-        <div class="main-container vr-container">
+        <div class="main-container">
           <Feed />
         </div>
     </div>

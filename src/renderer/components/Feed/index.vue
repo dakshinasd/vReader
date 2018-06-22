@@ -1,5 +1,5 @@
 <template>
-    <div class="feed">
+    <div class="feeds">
         <div class="feed-item" :key="index" v-for="(feed, index) in feedResults">
             {{feed.title}}
         </div>
@@ -46,8 +46,8 @@ export default {
         })
     },
     watch: {
-        feeds() {
-            this.getFeedResults();
+        feedResults() {
+            
         }
     }
 }
