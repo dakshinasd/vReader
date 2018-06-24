@@ -1,7 +1,13 @@
 const state = {
     feeds: [
-        "https://www.economist.com/sections/business-finance/rss.xml",
-        "https://www.nasa.gov/rss/dyn/breaking_news.rss"
+      {
+        title: "",
+        url: "https://www.economist.com/sections/business-finance/rss.xml"
+      },
+      {
+        title: "",
+        url: "https://www.nasa.gov/rss/dyn/breaking_news.rss"
+      }
     ]
   }
 

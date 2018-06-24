@@ -13,6 +13,25 @@
         cursor: pointer;
         transition: all ease-in-out 0.2s;
 
+        .image-container img {
+            width: 100px;
+            float: left;
+        }
+        .content-container {
+            float: right;
+            width: calc(100% - 120px);
+
+            .feed-title {
+                font-weight: bold;
+                font-size: 18px;
+                margin-bottom: 10px; 
+            }
+
+            img {
+                display: none;
+            }
+        }
+
         &:hover {
             background-color: $dark-3;
         }
