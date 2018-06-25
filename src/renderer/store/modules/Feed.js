@@ -1,11 +1,11 @@
 const state = {
     feeds: [
       {
-        title: "",
+        title: "The Economist",
         url: "https://www.economist.com/sections/business-finance/rss.xml"
       },
       {
-        title: "",
+        title: "NASA Breaking News",
         url: "https://www.nasa.gov/rss/dyn/breaking_news.rss"
       }
     ]

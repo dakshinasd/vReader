@@ -1,21 +1,15 @@
 <template>
     <div class="feeds">
-        <div class="feed-item clearfix" :key="index" v-for="(feed, index) in feedResults"> 
-        
-            <div class="image-container" v-if="feed.enclosure">
-                <img :src="feed.enclosure.url" :alt="feed.title">
-            </div>
-            <div class="content-container">
-                <h3 class="feed-title">{{feed.title}}</h3>
-                <div v-html="feed.content"></div>
-            </div>
-        </div>
+        <FeedItem :key="index" v-for="(feed, index) in feedResults" :feed = "feed"/> 
     </div>
 </template>
 
 <script>
 import Parser from "rss-parser";
 import { mapGetters } from "vuex";
+
+import FeedItem from "./FeedItem";
+
 export default {
     name: "feed",
     data() {
@@ -24,6 +18,7 @@ export default {
             sortedFeeds: []
         }
     },
+    components: { FeedItem },
     methods: {
 
         // fetch RSS feed from URLs
@@ -39,7 +34,6 @@ export default {
             
                         this.feedResults.push(...feedResults.items);
                         this.sortFeedsArray(this.feedResults);
-                        console.log(this.feedResults)
                     })();
                     
                 })
@@ -50,7 +44,8 @@ export default {
         sortFeedsArray(arr) {
             arr.sort(function(a, b) {
                 // convert date object into number to resolve issue in typescript
-                return +new Date(a.pubDate) - +new Date(b.pubDate);
+                // a,b has been inversed due to change the order
+                return +new Date(b.pubDate) - +new Date(a.pubDate);
             })
 
         }

@@ -13,18 +13,38 @@
         cursor: pointer;
         transition: all ease-in-out 0.2s;
 
-        .image-container img {
+        .image-container {
+            
+            background-color: $dark-3;
             width: 100px;
+            min-height: 75px;
             float: left;
+
+            img {
+                width: 100px;
+                float: left;
+            }
         }
+
         .content-container {
             float: right;
             width: calc(100% - 120px);
 
             .feed-title {
                 font-weight: bold;
-                font-size: 18px;
-                margin-bottom: 10px; 
+                font-size: 1em;
+                margin-bottom: 0.4em; 
+                line-height: 1.4em;
+            }
+
+            .feed-content {
+                line-height: 1.4em;
+                font-size: 0.8em;
+            }
+
+            .feed-meta {
+                margin-top: 0.8em;
+                font-size: 0.7em;
             }
 
             img {
